@@ -16,7 +16,7 @@ if data.StatusCode == 200 then
 
 		Mouse.Button1Down:connect(
 			function()
-				if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftAlt) then
+				if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.G) then
 					return
 				end
 				if not Mouse.Target then
