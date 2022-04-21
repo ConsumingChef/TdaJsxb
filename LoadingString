@@ -1,3 +1,9 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+
 
 local data = {
 	StatusCode = 200;
@@ -10,7 +16,7 @@ if data.StatusCode == 200 then
 
 		Mouse.Button1Down:connect(
 			function()
-				if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.G) then
+				if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftAlt) then
 					return
 				end
 				if not Mouse.Target then
@@ -125,189 +131,591 @@ if data.StatusCode == 200 then
 		getgenv().PredictMovement = true -- Predicts if they are moving in fast velocity (like jumping) so the aimbot will go a bit faster to match their speed
 		getgenv().PredictionVelocity = 15 -- The speed of the PredictMovement feature
 
-		loadstring(game:HttpGet("https://pastebin.com/raw/PdvwN8tD", true))()
+		loadstring(game:HttpGet("https://pastebin.com/raw/J1zN8CaL", true))()
 
-		local ScreenGui = Instance.new("ScreenGui")
-		local Frame = Instance.new("Frame")
-		local FrameImage = Instance.new("ImageLabel")
-		local Tittle = Instance.new("TextLabel")
-		local ImageLabel = Instance.new("ImageLabel")
-		local WarningMessage = Instance.new("TextLabel")
-		local TowerButton = Instance.new("TextButton")
-		local ATM = Instance.new("TextButton")
-		local VibeCheckButton = Instance.new("TextButton")
-		local FarDealerButton = Instance.new("TextButton")
-		local GarageButton = Instance.new("TextButton")
-		local VibeLiftButton = Instance.new("TextButton")
 
-		if syn then syn.protect_gui(ScreenGui) end
-		ScreenGui.Parent = game.CoreGui
-		ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-		Frame.Parent = ScreenGui
-		Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Frame.BackgroundTransparency = 1.000
-		Frame.Position = UDim2.new(0.837499976, 0, 0.752147257, 0)
-		Frame.Size = UDim2.new(0, 100, 0, 100)
 
-		FrameImage.Name = "Frame Image"
-		FrameImage.Parent = Frame
-		FrameImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		FrameImage.Position = UDim2.new(-1.85000002, 0, -0.599999964, 0)
-		FrameImage.Size = UDim2.new(0, 357, 0, 228)
-		FrameImage.Image = "http://www.roblox.com/asset/?id=5835708699"
-		FrameImage.Draggable = true
-		FrameImage.Active = true
 
-		Tittle.Name = "Tittle"
-		Tittle.Parent = FrameImage
-		Tittle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Tittle.BackgroundTransparency = 1.000
-		Tittle.Position = UDim2.new(-0.103641458, 0, -0.0570175424, 0)
-		Tittle.Size = UDim2.new(0, 200, 0, 50)
-		Tittle.Font = Enum.Font.SourceSans
-		Tittle.Text = "Consumers Teleports"
-		Tittle.TextColor3 = Color3.fromRGB(255, 255, 255)
-		Tittle.TextSize = 14.000
 
-		ImageLabel.Parent = FrameImage
-		ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		ImageLabel.BackgroundTransparency = 1.000
-		ImageLabel.Position = UDim2.new(0.0336134471, 0, 0.162280709, 0)
-		ImageLabel.Size = UDim2.new(0, 20, 0, 20)
-		ImageLabel.Image = "http://www.roblox.com/asset/?id=5631336371"
+local ConsumerHubCriminality = Instance.new("ScreenGui")
+local MAIN = Instance.new("ImageLabel")
+local Tittle = Instance.new("Frame")
+local Name = Instance.new("TextLabel")
+local PurpleBar = Instance.new("Frame")
+local CriminalityFrame = Instance.new("Frame")
+local CriminalityMain = Instance.new("Frame")
+local Name_2 = Instance.new("TextLabel")
+local PurpleBar_2 = Instance.new("Frame")
+local PurpleBar_3 = Instance.new("Frame")
+local Esp = Instance.new("TextLabel")
+local InfStamina = Instance.new("TextLabel")
+local ScrapEsp = Instance.new("TextLabel")
+local SafeEsp = Instance.new("TextLabel")
+local NoRecoil = Instance.new("TextLabel")
+local BigHead = Instance.new("TextLabel")
+local FullBright = Instance.new("TextLabel")
+local FastPickup = Instance.new("TextLabel")
+local NoFallDamage = Instance.new("TextLabel")
+local DealerEsp = Instance.new("TextLabel")
+local ESPbutton = Instance.new("TextButton")
+local infstamina = Instance.new("TextButton")
+local scrapEsp = Instance.new("TextButton")
+local safeEsp = Instance.new("TextButton")
+local NoRecoil_2 = Instance.new("TextButton")
+local bigHead = Instance.new("TextButton")
+local FullBright_2 = Instance.new("TextButton")
+local FastPickup_2 = Instance.new("TextButton")
+local NoFallDamage_2 = Instance.new("TextButton")
+local DealerEsp_2 = Instance.new("TextButton")
+local CriminalitySettings = Instance.new("Frame")
+local Name_3 = Instance.new("TextLabel")
+local PurpleBar_4 = Instance.new("Frame")
+local PurpleBar_5 = Instance.new("Frame")
+local ComingSoon = Instance.new("TextButton")
+local CriminalityKeyBind = Instance.new("Frame")
+local Name_4 = Instance.new("TextLabel")
+local PurpleBar_6 = Instance.new("Frame")
+local PurpleBar_7 = Instance.new("Frame")
+local Aimlock = Instance.new("TextLabel")
+local BigHead_2 = Instance.new("TextLabel")
+local Gui = Instance.new("TextLabel")
+local CriminalityTp = Instance.new("Frame")
+local Name_5 = Instance.new("TextLabel")
+local PurpleBar_8 = Instance.new("Frame")
+local PurpleBar_9 = Instance.new("Frame")
+local VibeCheck = Instance.new("TextButton")
+local FarDealer = Instance.new("TextButton")
+local FarATM = Instance.new("TextButton")
+local Tower = Instance.new("TextButton")
+local GarageButton = Instance.new("TextButton")
+local VibeButton = Instance.new("TextButton")
+local SectionCriminality = Instance.new("Frame")
+local Main = Instance.new("TextButton")
+local ActivatedBar = Instance.new("Frame")
+local Settings = Instance.new("TextButton")
+local ActivatedBar_2 = Instance.new("Frame")
 
-		WarningMessage.Name = "Warning Message"
-		WarningMessage.Parent = FrameImage
-		WarningMessage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		WarningMessage.BackgroundTransparency = 1.000
-		WarningMessage.Position = UDim2.new(0.257703096, 0, 0.09649124, 0)
-		WarningMessage.Size = UDim2.new(0, 200, 0, 50)
-		WarningMessage.Font = Enum.Font.SourceSans
-		WarningMessage.Text = "Warning Please Activate No Fall Damage When Using Teleports"
-		WarningMessage.TextColor3 = Color3.fromRGB(0, 0, 0)
-		WarningMessage.TextSize = 14.000
+--Properties:
 
-		TowerButton.Name = "Tower Button"
-		TowerButton.Parent = FrameImage
-		TowerButton.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
-		TowerButton.Position = UDim2.new(0.044817932, 0, 0.657894731, 0)
-		TowerButton.Size = UDim2.new(0, 94, 0, 33)
-		TowerButton.Font = Enum.Font.SourceSans
-		TowerButton.Text = "Tower "
-		TowerButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-		TowerButton.TextSize = 14.000
-		TowerButton.MouseButton1Down:connect(
-			function()
-				shared.teleport = true
+ConsumerHubCriminality.Name = "ConsumerHubCriminality"
+ConsumerHubCriminality.DisplayOrder = 999999999
+ConsumerHubCriminality.Parent = game:WaitForChild("CoreGui")
 
-				local TPCFrame =
-					CFrame.new(
-						-4499.30957,
-						100.186272,
-						-871.317627,
-						0.956449628,
-						0.000170274943,
-						0.291897297,
-						-0.0142883053,
-						0.998828411,
-						0.0462353341,
-						-0.291547447,
-						-0.0483924858,
-						0.955331504
-					)
-				--Put a new cframe or cframe property in here
-				local User = game.Players.LocalPlayer.Character.HumanoidRootPart
-				local WaitTime = 10 --Make More/Less depending if it works or not
+MAIN.Name = "MAIN"
+MAIN.Parent = ConsumerHubCriminality
+MAIN.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+MAIN.BorderColor3 = Color3.fromRGB(84, 84, 84)
+MAIN.BorderSizePixel = 3
+MAIN.Position = UDim2.new(0.0417897627, 0, 0.0764141604, 0)
+MAIN.Size = UDim2.new(0.25, 0, 0.600000024, 0)
+MAIN.Image = "rbxassetid://5553946656"
+MAIN.ImageColor3 = Color3.fromRGB(0, 0, 0)
+MAIN.ScaleType = Enum.ScaleType.Tile
+MAIN.TileSize = UDim2.new(0.300000012, 0, 0.300000012, 0)
 
-				while shared.teleport do
-					wait()
+Tittle.Name = "Tittle"
+Tittle.Parent = MAIN
+Tittle.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Tittle.BackgroundTransparency = 0.100
+Tittle.Position = UDim2.new(0, 0, -1.54129172e-08, 0)
+Tittle.Size = UDim2.new(1, 0, 0.0606060885, 0)
 
-					spawn(
-						function()
-							wait(WaitTime)
-							shared.teleport = false
-						end
-					)
+Name.Name = "Name"
+Name.Parent = Tittle
+Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name.BackgroundTransparency = 1.000
+Name.Size = UDim2.new(0.478181809, 0, 1.00000012, 0)
+Name.Font = Enum.Font.Nunito
+Name.Text = "ConsumerHub V1"
+Name.TextColor3 = Color3.fromRGB(234, 234, 234)
+Name.TextScaled = true
+Name.TextSize = 14.000
+Name.TextWrapped = true
 
-					User.CFrame = TPCFrame
+PurpleBar.Name = "PurpleBar"
+PurpleBar.Parent = MAIN
+PurpleBar.BackgroundColor3 = Color3.fromRGB(197, 53, 236)
+PurpleBar.Position = UDim2.new(0, 0, 0.0606060401, 0)
+PurpleBar.Size = UDim2.new(1, 0, 0.00499999989, 0)
 
-					local args = {
-						[1] = "__--r",
-						[2] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
-						[3] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.Angles(0, 0, 0)
-					}
+CriminalityFrame.Name = "CriminalityFrame"
+CriminalityFrame.Parent = MAIN
+CriminalityFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CriminalityFrame.BackgroundTransparency = 1.000
+CriminalityFrame.Position = UDim2.new(0, 0, 0.143434361, 0)
+CriminalityFrame.Size = UDim2.new(1, 0, 0.856565595, 0)
 
-					game:GetService("ReplicatedStorage").Events.__DFfDD:FireServer(unpack(args))
-				end
-			end
-		)
+CriminalityMain.Name = "CriminalityMain"
+CriminalityMain.Parent = CriminalityFrame
+CriminalityMain.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+CriminalityMain.BorderColor3 = Color3.fromRGB(60, 60, 60)
+CriminalityMain.BorderSizePixel = 0
+CriminalityMain.Position = UDim2.new(0.0266667027, 0, 0.0255099256, 0)
+CriminalityMain.Size = UDim2.new(0.524848402, 0, 0.929678738, 0)
 
-		ATM.Name = "ATM"
-		ATM.Parent = FrameImage
-		ATM.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
-		ATM.Position = UDim2.new(0.683473408, 0, 0.315789461, 0)
-		ATM.Size = UDim2.new(0, 94, 0, 33)
-		ATM.Font = Enum.Font.SourceSans
-		ATM.Text = "Far ATM"
-		ATM.TextColor3 = Color3.fromRGB(255, 255, 255)
-		ATM.TextSize = 14.000
-		ATM.MouseButton1Down:connect(
-			function()
-				shared.teleport = true
+Name_2.Name = "Name"
+Name_2.Parent = CriminalityMain
+Name_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name_2.BackgroundTransparency = 1.000
+Name_2.Position = UDim2.new(0.308110297, 0, -0.037471313, 0)
+Name_2.Size = UDim2.new(0.378502399, 0, 0.0840348527, 0)
+Name_2.ZIndex = 3
+Name_2.Font = Enum.Font.Nunito
+Name_2.Text = "Criminality"
+Name_2.TextColor3 = Color3.fromRGB(234, 234, 234)
+Name_2.TextScaled = true
+Name_2.TextSize = 14.000
+Name_2.TextWrapped = true
 
-				local TPCFrame =
-					CFrame.new(
-						-4793.1748,
-						3.89438605,
-						-372.768463,
-						0.243911162,
-						9.29109589e-08,
-						-0.969797552,
-						-2.29184636e-08,
-						1,
-						9.00403236e-08,
-						0.969797552,
-						2.64431199e-10,
-						0.243911162
-					)
-				--Put a new cframe or cframe property in here
-				local User = game.Players.LocalPlayer.Character.HumanoidRootPart
-				local WaitTime = 10 --Make More/Less depending if it works or not
+PurpleBar_2.Name = "PurpleBar"
+PurpleBar_2.Parent = CriminalityMain
+PurpleBar_2.BackgroundColor3 = Color3.fromRGB(197, 53, 236)
+PurpleBar_2.Size = UDim2.new(0.308110297, 0, 0.00999999978, 0)
 
-				while shared.teleport do
-					wait()
+PurpleBar_3.Name = "PurpleBar"
+PurpleBar_3.Parent = CriminalityMain
+PurpleBar_3.BackgroundColor3 = Color3.fromRGB(197, 53, 236)
+PurpleBar_3.Position = UDim2.new(0.686612666, 0, 0, 0)
+PurpleBar_3.Size = UDim2.new(0.313387275, 0, 0.00999999978, 0)
 
-					spawn(
-						function()
-							wait(WaitTime)
-							shared.teleport = false
-						end
-					)
+Esp.Name = "Esp"
+Esp.Parent = CriminalityMain
+Esp.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+Esp.BorderColor3 = Color3.fromRGB(86, 86, 86)
+Esp.Position = UDim2.new(0.0551724769, 0, 0.0487628579, 0)
+Esp.Size = UDim2.new(0.576973438, 0, 0.0697093382, 0)
+Esp.Font = Enum.Font.SourceSans
+Esp.Text = "Esp"
+Esp.TextColor3 = Color3.fromRGB(222, 222, 222)
+Esp.TextScaled = true
+Esp.TextSize = 14.000
+Esp.TextWrapped = true
 
-					User.CFrame = TPCFrame
+InfStamina.Name = "InfStamina"
+InfStamina.Parent = CriminalityMain
+InfStamina.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+InfStamina.BorderColor3 = Color3.fromRGB(86, 86, 86)
+InfStamina.Position = UDim2.new(0.0551724769, 0, 0.138782263, 0)
+InfStamina.Size = UDim2.new(0.576973438, 0, 0.0697093382, 0)
+InfStamina.Font = Enum.Font.SourceSans
+InfStamina.Text = "Infinite Stamina"
+InfStamina.TextColor3 = Color3.fromRGB(222, 222, 222)
+InfStamina.TextScaled = true
+InfStamina.TextSize = 14.000
+InfStamina.TextWrapped = true
 
-					local args = {
-						[1] = "__--r",
-						[2] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
-						[3] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.Angles(0, 0, 0)
-					}
+ScrapEsp.Name = "ScrapEsp"
+ScrapEsp.Parent = CriminalityMain
+ScrapEsp.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+ScrapEsp.BorderColor3 = Color3.fromRGB(86, 86, 86)
+ScrapEsp.Position = UDim2.new(0.0551724769, 0, 0.228801683, 0)
+ScrapEsp.Size = UDim2.new(0.576973438, 0, 0.0697093382, 0)
+ScrapEsp.Font = Enum.Font.SourceSans
+ScrapEsp.Text = "Scrap Esp"
+ScrapEsp.TextColor3 = Color3.fromRGB(222, 222, 222)
+ScrapEsp.TextScaled = true
+ScrapEsp.TextSize = 14.000
+ScrapEsp.TextWrapped = true
 
-					game:GetService("ReplicatedStorage").Events.__DFfDD:FireServer(unpack(args))
-				end
-			end
-		)
+SafeEsp.Name = "Safe Esp"
+SafeEsp.Parent = CriminalityMain
+SafeEsp.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+SafeEsp.BorderColor3 = Color3.fromRGB(86, 86, 86)
+SafeEsp.Position = UDim2.new(0.0551724769, 0, 0.321724951, 0)
+SafeEsp.Size = UDim2.new(0.576973438, 0, 0.0697093382, 0)
+SafeEsp.Font = Enum.Font.SourceSans
+SafeEsp.Text = "Safe Esp"
+SafeEsp.TextColor3 = Color3.fromRGB(222, 222, 222)
+SafeEsp.TextScaled = true
+SafeEsp.TextSize = 14.000
+SafeEsp.TextWrapped = true
 
-		VibeCheckButton.Name = "Vibe Check Button"
-		VibeCheckButton.Parent = FrameImage
-		VibeCheckButton.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
-		VibeCheckButton.Position = UDim2.new(0.044817932, 0, 0.315789461, 0)
-		VibeCheckButton.Size = UDim2.new(0, 94, 0, 33)
-		VibeCheckButton.Font = Enum.Font.SourceSans
-		VibeCheckButton.Text = "Vibe Check"
-		VibeCheckButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-		VibeCheckButton.TextSize = 14.000
-		VibeCheckButton.MouseButton1Down:connect(
+NoRecoil.Name = "NoRecoil"
+NoRecoil.Parent = CriminalityMain
+NoRecoil.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+NoRecoil.BorderColor3 = Color3.fromRGB(86, 86, 86)
+NoRecoil.Position = UDim2.new(0.0551724769, 0, 0.414648205, 0)
+NoRecoil.Size = UDim2.new(0.576973438, 0, 0.0697093382, 0)
+NoRecoil.Font = Enum.Font.SourceSans
+NoRecoil.Text = "No Recoil"
+NoRecoil.TextColor3 = Color3.fromRGB(222, 222, 222)
+NoRecoil.TextScaled = true
+NoRecoil.TextSize = 14.000
+NoRecoil.TextWrapped = true
+
+		BigHead.Name = "Big Head"
+BigHead.Parent = CriminalityMain
+BigHead.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+BigHead.BorderColor3 = Color3.fromRGB(86, 86, 86)
+BigHead.Position = UDim2.new(0.0551724769, 0, 0.510475338, 0)
+BigHead.Size = UDim2.new(0.576973438, 0, 0.0697093382, 0)
+BigHead.Font = Enum.Font.SourceSans
+BigHead.Text = "Big Head"
+BigHead.TextColor3 = Color3.fromRGB(222, 222, 222)
+BigHead.TextScaled = true
+BigHead.TextSize = 14.000
+BigHead.TextWrapped = true
+
+FullBright.Name = "FullBright"
+FullBright.Parent = CriminalityMain
+FullBright.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+FullBright.BorderColor3 = Color3.fromRGB(86, 86, 86)
+FullBright.Position = UDim2.new(0.0551724769, 0, 0.603398621, 0)
+FullBright.Size = UDim2.new(0.576973438, 0, 0.0697093382, 0)
+FullBright.Font = Enum.Font.SourceSans
+FullBright.Text = "FullBright"
+FullBright.TextColor3 = Color3.fromRGB(222, 222, 222)
+FullBright.TextScaled = true
+FullBright.TextSize = 14.000
+FullBright.TextWrapped = true
+
+FastPickup.Name = "FastPickup"
+FastPickup.Parent = CriminalityMain
+FastPickup.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+FastPickup.BorderColor3 = Color3.fromRGB(86, 86, 86)
+FastPickup.Position = UDim2.new(0.0551724769, 0, 0.705033481, 0)
+FastPickup.Size = UDim2.new(0.576973438, 0, 0.0697093382, 0)
+FastPickup.Font = Enum.Font.SourceSans
+FastPickup.Text = "Fast Pickup"
+FastPickup.TextColor3 = Color3.fromRGB(222, 222, 222)
+FastPickup.TextScaled = true
+FastPickup.TextSize = 14.000
+FastPickup.TextWrapped = true
+
+NoFallDamage.Name = "NoFallDamage"
+NoFallDamage.Parent = CriminalityMain
+NoFallDamage.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+NoFallDamage.BorderColor3 = Color3.fromRGB(86, 86, 86)
+NoFallDamage.Position = UDim2.new(0.0551724769, 0, 0.800860524, 0)
+NoFallDamage.Size = UDim2.new(0.576973438, 0, 0.0697093382, 0)
+NoFallDamage.Font = Enum.Font.SourceSans
+NoFallDamage.Text = "No Fall Damage"
+NoFallDamage.TextColor3 = Color3.fromRGB(222, 222, 222)
+NoFallDamage.TextScaled = true
+NoFallDamage.TextSize = 14.000
+NoFallDamage.TextWrapped = true
+
+DealerEsp.Name = "DealerEsp"
+DealerEsp.Parent = CriminalityMain
+DealerEsp.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+DealerEsp.BorderColor3 = Color3.fromRGB(86, 86, 86)
+DealerEsp.Position = UDim2.new(0.0551724769, 0, 0.902495444, 0)
+DealerEsp.Size = UDim2.new(0.576973438, 0, 0.0697093382, 0)
+DealerEsp.Font = Enum.Font.SourceSans
+DealerEsp.Text = "Dealer Esp"
+DealerEsp.TextColor3 = Color3.fromRGB(222, 222, 222)
+DealerEsp.TextScaled = true
+DealerEsp.TextSize = 14.000
+DealerEsp.TextWrapped = true
+
+		ESPbutton.Name = "ESP Button"
+ESPbutton.Parent = CriminalityMain
+ESPbutton.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+ESPbutton.BorderColor3 = Color3.fromRGB(86, 86, 86)
+ESPbutton.Position = UDim2.new(0.685912311, 0, 0.0397545286, 0)
+ESPbutton.Size = UDim2.new(0.2493404, 0, 0.0787176862, 0)
+ESPbutton.ZIndex = 2
+ESPbutton.Font = Enum.Font.Nunito
+ESPbutton.Text = ""
+ESPbutton.TextColor3 = Color3.fromRGB(234, 234, 234)
+ESPbutton.TextScaled = true
+ESPbutton.TextSize = 14.000
+ESPbutton.TextWrapped = true
+
+		infstamina.Name = "Inf stam Button"
+infstamina.Parent = CriminalityMain
+infstamina.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+infstamina.BorderColor3 = Color3.fromRGB(86, 86, 86)
+infstamina.Position = UDim2.new(0.685912311, 0, 0.132840484, 0)
+infstamina.Size = UDim2.new(0.2493404, 0, 0.0787176862, 0)
+infstamina.ZIndex = 2
+infstamina.Font = Enum.Font.Nunito
+infstamina.Text = ""
+infstamina.TextColor3 = Color3.fromRGB(234, 234, 234)
+infstamina.TextScaled = true
+infstamina.TextSize = 14.000
+infstamina.TextWrapped = true
+
+		scrapEsp.Name = "scrap esp Button"
+scrapEsp.Parent = CriminalityMain
+scrapEsp.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+scrapEsp.BorderColor3 = Color3.fromRGB(86, 86, 86)
+scrapEsp.Position = UDim2.new(0.685912311, 0, 0.225926429, 0)
+scrapEsp.Size = UDim2.new(0.2493404, 0, 0.0787176862, 0)
+scrapEsp.ZIndex = 2
+scrapEsp.Font = Enum.Font.Nunito
+scrapEsp.Text = ""
+scrapEsp.TextColor3 = Color3.fromRGB(234, 234, 234)
+scrapEsp.TextScaled = true
+scrapEsp.TextSize = 14.000
+scrapEsp.TextWrapped = true
+
+		safeEsp.Name = "Safe ESP Button"
+safeEsp.Parent = CriminalityMain
+safeEsp.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+safeEsp.BorderColor3 = Color3.fromRGB(86, 86, 86)
+safeEsp.Position = UDim2.new(0.685912311, 0, 0.316009611, 0)
+safeEsp.Size = UDim2.new(0.2493404, 0, 0.0787176862, 0)
+safeEsp.ZIndex = 2
+safeEsp.Font = Enum.Font.Nunito
+safeEsp.Text = ""
+safeEsp.TextColor3 = Color3.fromRGB(234, 234, 234)
+safeEsp.TextScaled = true
+safeEsp.TextSize = 14.000
+safeEsp.TextWrapped = true
+
+		NoRecoil_2.Name = "No Recoil button"
+NoRecoil_2.Parent = CriminalityMain
+NoRecoil_2.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+NoRecoil_2.BorderColor3 = Color3.fromRGB(86, 86, 86)
+NoRecoil_2.Position = UDim2.new(0.685912311, 0, 0.412098348, 0)
+NoRecoil_2.Size = UDim2.new(0.2493404, 0, 0.0787176862, 0)
+NoRecoil_2.ZIndex = 2
+NoRecoil_2.Font = Enum.Font.Nunito
+NoRecoil_2.Text = ""
+NoRecoil_2.TextColor3 = Color3.fromRGB(234, 234, 234)
+NoRecoil_2.TextScaled = true
+NoRecoil_2.TextSize = 14.000
+NoRecoil_2.TextWrapped = true
+
+bigHead.Name = "HBE Button"
+bigHead.Parent = CriminalityMain
+bigHead.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+bigHead.BorderColor3 = Color3.fromRGB(86, 86, 86)
+bigHead.Position = UDim2.new(0.685912311, 0, 0.505184293, 0)
+bigHead.Size = UDim2.new(0.2493404, 0, 0.0787176862, 0)
+bigHead.ZIndex = 2
+bigHead.Font = Enum.Font.Nunito
+bigHead.Text = ""
+bigHead.TextColor3 = Color3.fromRGB(234, 234, 234)
+bigHead.TextScaled = true
+bigHead.TextSize = 14.000
+bigHead.TextWrapped = true
+
+		FullBright_2.Name = "Full Bright Button"
+FullBright_2.Parent = CriminalityMain
+FullBright_2.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+FullBright_2.BorderColor3 = Color3.fromRGB(86, 86, 86)
+FullBright_2.Position = UDim2.new(0.685912311, 0, 0.607278585, 0)
+FullBright_2.Size = UDim2.new(0.2493404, 0, 0.0787176862, 0)
+FullBright_2.ZIndex = 2
+FullBright_2.Font = Enum.Font.Nunito
+FullBright_2.Text = ""
+FullBright_2.TextColor3 = Color3.fromRGB(234, 234, 234)
+FullBright_2.TextScaled = true
+FullBright_2.TextSize = 14.000
+FullBright_2.TextWrapped = true
+
+		FastPickup_2.Name = "fast pickup Button"
+FastPickup_2.Parent = CriminalityMain
+FastPickup_2.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+FastPickup_2.BorderColor3 = Color3.fromRGB(86, 86, 86)
+FastPickup_2.Position = UDim2.new(0.685912311, 0, 0.70036453, 0)
+FastPickup_2.Size = UDim2.new(0.2493404, 0, 0.0787176862, 0)
+FastPickup_2.ZIndex = 2
+FastPickup_2.Font = Enum.Font.Nunito
+FastPickup_2.Text = ""
+FastPickup_2.TextColor3 = Color3.fromRGB(234, 234, 234)
+FastPickup_2.TextScaled = true
+FastPickup_2.TextSize = 14.000
+FastPickup_2.TextWrapped = true
+
+		NoFallDamage_2.Name = "Fall Damage"
+NoFallDamage_2.Parent = CriminalityMain
+NoFallDamage_2.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+NoFallDamage_2.BorderColor3 = Color3.fromRGB(86, 86, 86)
+NoFallDamage_2.Position = UDim2.new(0.685912311, 0, 0.799456, 0)
+NoFallDamage_2.Size = UDim2.new(0.2493404, 0, 0.0787176862, 0)
+NoFallDamage_2.ZIndex = 2
+NoFallDamage_2.Font = Enum.Font.Nunito
+NoFallDamage_2.Text = ""
+NoFallDamage_2.TextColor3 = Color3.fromRGB(234, 234, 234)
+NoFallDamage_2.TextScaled = true
+NoFallDamage_2.TextSize = 14.000
+NoFallDamage_2.TextWrapped = true
+
+		DealerEsp_2.Name = "Dealer ESP Button"
+DealerEsp_2.Parent = CriminalityMain
+DealerEsp_2.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+DealerEsp_2.BorderColor3 = Color3.fromRGB(86, 86, 86)
+DealerEsp_2.Position = UDim2.new(0.685912311, 0, 0.895544708, 0)
+DealerEsp_2.Size = UDim2.new(0.2493404, 0, 0.0787176862, 0)
+DealerEsp_2.ZIndex = 2
+DealerEsp_2.Font = Enum.Font.Nunito
+DealerEsp_2.Text = ""
+DealerEsp_2.TextColor3 = Color3.fromRGB(234, 234, 234)
+DealerEsp_2.TextScaled = true
+DealerEsp_2.TextSize = 14.000
+DealerEsp_2.TextWrapped = true
+
+CriminalitySettings.Name = "CriminalitySettings"
+CriminalitySettings.Parent = CriminalityFrame
+CriminalitySettings.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+CriminalitySettings.BorderColor3 = Color3.fromRGB(60, 60, 60)
+CriminalitySettings.BorderSizePixel = 0
+CriminalitySettings.Position = UDim2.new(0.0606060624, 0, 0.0443778113, 0)
+CriminalitySettings.Size = UDim2.new(0.529696941, 0, 0.696188152, 0)
+CriminalitySettings.Visible = false
+
+Name_3.Name = "Name"
+Name_3.Parent = CriminalitySettings
+Name_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name_3.BackgroundTransparency = 1.000
+Name_3.Position = UDim2.new(0, 0, -0.0374713093, 0)
+Name_3.Size = UDim2.new(1.00000012, 0, 0.0840348527, 0)
+Name_3.ZIndex = 3
+Name_3.Font = Enum.Font.Nunito
+Name_3.Text = "Settings"
+Name_3.TextColor3 = Color3.fromRGB(234, 234, 234)
+Name_3.TextScaled = true
+Name_3.TextSize = 14.000
+Name_3.TextWrapped = true
+
+PurpleBar_4.Name = "PurpleBar"
+PurpleBar_4.Parent = CriminalitySettings
+PurpleBar_4.BackgroundColor3 = Color3.fromRGB(197, 53, 236)
+PurpleBar_4.Size = UDim2.new(0.331807792, 0, 0.00999999978, 0)
+
+PurpleBar_5.Name = "PurpleBar"
+PurpleBar_5.Parent = CriminalitySettings
+PurpleBar_5.BackgroundColor3 = Color3.fromRGB(197, 53, 236)
+PurpleBar_5.Position = UDim2.new(0.655706048, 0, 0, 0)
+PurpleBar_5.Size = UDim2.new(0.344293952, 0, 0.00999999978, 0)
+
+ComingSoon.Name = "ComingSoon"
+ComingSoon.Parent = CriminalitySettings
+ComingSoon.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+ComingSoon.BorderColor3 = Color3.fromRGB(86, 86, 86)
+ComingSoon.Position = UDim2.new(0.0773455203, 0, 0.210409045, 0)
+ComingSoon.Size = UDim2.new(0.842580974, 0, 0.093060948, 0)
+ComingSoon.Font = Enum.Font.Nunito
+ComingSoon.Text = "Coming Soon..."
+ComingSoon.TextColor3 = Color3.fromRGB(234, 234, 234)
+ComingSoon.TextScaled = true
+ComingSoon.TextSize = 14.000
+ComingSoon.TextWrapped = true
+
+CriminalityKeyBind.Name = "CriminalityKeyBind"
+CriminalityKeyBind.Parent = CriminalityFrame
+CriminalityKeyBind.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+CriminalityKeyBind.BorderColor3 = Color3.fromRGB(60, 60, 60)
+CriminalityKeyBind.BorderSizePixel = 0
+CriminalityKeyBind.Position = UDim2.new(0.587909102, 0, 0.0236415528, 0)
+CriminalityKeyBind.Size = UDim2.new(0.376969576, 0, 0.415527821, 0)
+
+Name_4.Name = "Name"
+Name_4.Parent = CriminalityKeyBind
+Name_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name_4.BackgroundTransparency = 1.000
+Name_4.Position = UDim2.new(0.308110297, 0, -0.037471313, 0)
+Name_4.Size = UDim2.new(0.378502399, 0, 0.0840348527, 0)
+Name_4.ZIndex = 3
+Name_4.Font = Enum.Font.Nunito
+Name_4.Text = "KeyBind"
+Name_4.TextColor3 = Color3.fromRGB(234, 234, 234)
+Name_4.TextScaled = true
+Name_4.TextSize = 14.000
+Name_4.TextWrapped = true
+
+PurpleBar_6.Name = "PurpleBar"
+PurpleBar_6.Parent = CriminalityKeyBind
+PurpleBar_6.BackgroundColor3 = Color3.fromRGB(197, 53, 236)
+PurpleBar_6.Size = UDim2.new(0.308110297, 0, 0.00999999978, 0)
+
+PurpleBar_7.Name = "PurpleBar"
+PurpleBar_7.Parent = CriminalityKeyBind
+PurpleBar_7.BackgroundColor3 = Color3.fromRGB(197, 53, 236)
+PurpleBar_7.Position = UDim2.new(0.686612666, 0, 0, 0)
+PurpleBar_7.Size = UDim2.new(0.313387275, 0, 0.00999999978, 0)
+
+Aimlock.Name = "Aimlock"
+Aimlock.Parent = CriminalityKeyBind
+Aimlock.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+Aimlock.BorderColor3 = Color3.fromRGB(86, 86, 86)
+Aimlock.Position = UDim2.new(0.0873268172, 0, 0.133901253, 0)
+Aimlock.Size = UDim2.new(0.814915657, 0, 0.160523549, 0)
+Aimlock.Font = Enum.Font.SourceSans
+Aimlock.Text = "Aimlock - Y"
+Aimlock.TextColor3 = Color3.fromRGB(222, 222, 222)
+Aimlock.TextScaled = true
+Aimlock.TextSize = 14.000
+Aimlock.TextWrapped = true
+
+BigHead_2.Name = "BigHead"
+BigHead_2.Parent = CriminalityKeyBind
+BigHead_2.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+BigHead_2.BorderColor3 = Color3.fromRGB(86, 86, 86)
+BigHead_2.Position = UDim2.new(0.0873268172, 0, 0.383640468, 0)
+BigHead_2.Size = UDim2.new(0.814915657, 0, 0.160523549, 0)
+BigHead_2.Font = Enum.Font.SourceSans
+BigHead_2.Text = "Big Head - T"
+BigHead_2.TextColor3 = Color3.fromRGB(222, 222, 222)
+BigHead_2.TextScaled = true
+BigHead_2.TextSize = 14.000
+BigHead_2.TextWrapped = true
+
+Gui.Name = "Gui"
+Gui.Parent = CriminalityKeyBind
+Gui.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+Gui.BorderColor3 = Color3.fromRGB(86, 86, 86)
+Gui.Position = UDim2.new(0.0873268172, 0, 0.633379698, 0)
+Gui.Size = UDim2.new(0.814915657, 0, 0.160523549, 0)
+Gui.Font = Enum.Font.SourceSans
+Gui.Text = "GUI - LeftAlt"
+Gui.TextColor3 = Color3.fromRGB(222, 222, 222)
+Gui.TextScaled = true
+Gui.TextSize = 14.000
+Gui.TextWrapped = true
+
+CriminalityTp.Name = "CriminalityTp"
+CriminalityTp.Parent = CriminalityFrame
+CriminalityTp.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+CriminalityTp.BorderColor3 = Color3.fromRGB(60, 60, 60)
+CriminalityTp.BorderSizePixel = 0
+CriminalityTp.Position = UDim2.new(0.587909102, 0, 0.474113166, 0)
+CriminalityTp.Size = UDim2.new(0.376969576, 0, 0.504762948, 0)
+
+Name_5.Name = "Name"
+Name_5.Parent = CriminalityTp
+Name_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name_5.BackgroundTransparency = 1.000
+Name_5.Position = UDim2.new(0.0450160913, 0, -0.0374713093, 0)
+Name_5.Size = UDim2.new(0.911692977, 0, 0.135117903, 0)
+Name_5.ZIndex = 3
+Name_5.Font = Enum.Font.Nunito
+Name_5.Text = "Tp"
+Name_5.TextColor3 = Color3.fromRGB(234, 234, 234)
+Name_5.TextScaled = true
+Name_5.TextSize = 14.000
+Name_5.TextWrapped = true
+
+PurpleBar_8.Name = "PurpleBar"
+PurpleBar_8.Parent = CriminalityTp
+PurpleBar_8.BackgroundColor3 = Color3.fromRGB(197, 53, 236)
+PurpleBar_8.Size = UDim2.new(0.308110297, 0, 0.00999999978, 0)
+
+PurpleBar_9.Name = "PurpleBar"
+PurpleBar_9.Parent = CriminalityTp
+PurpleBar_9.BackgroundColor3 = Color3.fromRGB(197, 53, 236)
+PurpleBar_9.Position = UDim2.new(0.686612666, 0, 0, 0)
+PurpleBar_9.Size = UDim2.new(0.313387275, 0, 0.00999999978, 0)
+
+VibeCheck.Name = "VibeCheck"
+VibeCheck.Parent = CriminalityTp
+VibeCheck.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+VibeCheck.BorderColor3 = Color3.fromRGB(86, 86, 86)
+VibeCheck.Position = UDim2.new(0.0912454277, 0, 0.110317133, 0)
+VibeCheck.Size = UDim2.new(0.817427814, 0, 0.112289496, 0)
+VibeCheck.Font = Enum.Font.Nunito
+VibeCheck.Text = "Vibe Check"
+VibeCheck.TextColor3 = Color3.fromRGB(234, 234, 234)
+VibeCheck.TextScaled = true
+VibeCheck.TextSize = 14.000
+VibeCheck.TextWrapped = true
+		
+		
+		VibeCheck.MouseButton1Down:connect(
 			function()
 				shared.teleport = true
 
@@ -353,16 +761,23 @@ if data.StatusCode == 200 then
 			end
 		)
 
-		FarDealerButton.Name = "Far Dealer Button"
-		FarDealerButton.Parent = FrameImage
-		FarDealerButton.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
-		FarDealerButton.Position = UDim2.new(0.366946787, 0, 0.315789461, 0)
-		FarDealerButton.Size = UDim2.new(0, 94, 0, 33)
-		FarDealerButton.Font = Enum.Font.SourceSans
-		FarDealerButton.Text = "Far Dealer"
-		FarDealerButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-		FarDealerButton.TextSize = 14.000
-		FarDealerButton.MouseButton1Down:connect(
+		
+		
+FarDealer.Name = "FarDealer"
+FarDealer.Parent = CriminalityTp
+FarDealer.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+FarDealer.BorderColor3 = Color3.fromRGB(86, 86, 86)
+FarDealer.Position = UDim2.new(0.0909999982, 0, 0.246000007, 0)
+FarDealer.Size = UDim2.new(0.817427814, 0, 0.112289496, 0)
+FarDealer.Font = Enum.Font.Nunito
+FarDealer.Text = "Far Dealer"
+FarDealer.TextColor3 = Color3.fromRGB(234, 234, 234)
+FarDealer.TextScaled = true
+FarDealer.TextSize = 14.000
+FarDealer.TextWrapped = true
+		
+		
+		FarDealer.MouseButton1Down:connect(
 			function()
 				shared.teleport = true
 
@@ -408,15 +823,143 @@ if data.StatusCode == 200 then
 			end
 		)
 
-		GarageButton.Name = "Garage Button"
-		GarageButton.Parent = FrameImage
-		GarageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
-		GarageButton.Position = UDim2.new(0.683473408, 0, 0.657894731, 0)
-		GarageButton.Size = UDim2.new(0, 94, 0, 33)
-		GarageButton.Font = Enum.Font.SourceSans
-		GarageButton.Text = "Garage Button"
-		GarageButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-		GarageButton.TextSize = 14.000
+		
+		
+FarATM.Name = "FarATM"
+FarATM.Parent = CriminalityTp
+FarATM.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+FarATM.BorderColor3 = Color3.fromRGB(86, 86, 86)
+FarATM.Position = UDim2.new(0.0912454277, 0, 0.376648039, 0)
+FarATM.Size = UDim2.new(0.817427814, 0, 0.112289496, 0)
+FarATM.Font = Enum.Font.Nunito
+FarATM.Text = "Far ATM"
+FarATM.TextColor3 = Color3.fromRGB(234, 234, 234)
+FarATM.TextScaled = true
+FarATM.TextSize = 14.000
+FarATM.TextWrapped = true
+		
+		
+		FarATM.MouseButton1Down:connect(
+			function()
+				shared.teleport = true
+
+				local TPCFrame =
+					CFrame.new(
+						-4793.1748,
+						3.89438605,
+						-372.768463,
+						0.243911162,
+						9.29109589e-08,
+						-0.969797552,
+						-2.29184636e-08,
+						1,
+						9.00403236e-08,
+						0.969797552,
+						2.64431199e-10,
+						0.243911162
+					)
+				--Put a new cframe or cframe property in here
+				local User = game.Players.LocalPlayer.Character.HumanoidRootPart
+				local WaitTime = 10 --Make More/Less depending if it works or not
+
+				while shared.teleport do
+					wait()
+
+					spawn(
+						function()
+							wait(WaitTime)
+							shared.teleport = false
+						end
+					)
+
+					User.CFrame = TPCFrame
+
+					local args = {
+						[1] = "__--r",
+						[2] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+						[3] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.Angles(0, 0, 0)
+					}
+
+					game:GetService("ReplicatedStorage").Events.__DFfDD:FireServer(unpack(args))
+				end
+			end
+		)
+		
+		
+		
+Tower.Name = "Tower"
+Tower.Parent = CriminalityTp
+Tower.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+Tower.BorderColor3 = Color3.fromRGB(86, 86, 86)
+Tower.Position = UDim2.new(0.0912454277, 0, 0.502804756, 0)
+Tower.Size = UDim2.new(0.817427814, 0, 0.112289496, 0)
+Tower.Font = Enum.Font.Nunito
+Tower.Text = "Tower"
+Tower.TextColor3 = Color3.fromRGB(234, 234, 234)
+Tower.TextScaled = true
+Tower.TextSize = 14.000
+Tower.TextWrapped = true
+		
+		
+		Tower.MouseButton1Down:connect(
+			function()
+				shared.teleport = true
+
+				local TPCFrame =
+					CFrame.new(
+						-4499.30957,
+						100.186272,
+						-871.317627,
+						0.956449628,
+						0.000170274943,
+						0.291897297,
+						-0.0142883053,
+						0.998828411,
+						0.0462353341,
+						-0.291547447,
+						-0.0483924858,
+						0.955331504
+					)
+				--Put a new cframe or cframe property in here
+				local User = game.Players.LocalPlayer.Character.HumanoidRootPart
+				local WaitTime = 10 --Make More/Less depending if it works or not
+
+				while shared.teleport do
+					wait()
+
+					spawn(
+						function()
+							wait(WaitTime)
+							shared.teleport = false
+						end
+					)
+
+					User.CFrame = TPCFrame
+
+					local args = {
+						[1] = "__--r",
+						[2] = game.Players.LocalPlayer.Character.HumanoidRootPart.Position,
+						[3] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.Angles(0, 0, 0)
+					}
+
+					game:GetService("ReplicatedStorage").Events.__DFfDD:FireServer(unpack(args))
+				end
+			end
+		)
+		
+GarageButton.Name = "GarageButton"
+GarageButton.Parent = CriminalityTp
+GarageButton.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+GarageButton.BorderColor3 = Color3.fromRGB(86, 86, 86)
+GarageButton.Position = UDim2.new(0.0909999982, 0, 0.758000016, 0)
+GarageButton.Size = UDim2.new(0.817427814, 0, 0.112289496, 0)
+GarageButton.Font = Enum.Font.Nunito
+GarageButton.Text = "Garage Button"
+GarageButton.TextColor3 = Color3.fromRGB(234, 234, 234)
+GarageButton.TextScaled = true
+GarageButton.TextSize = 14.000
+GarageButton.TextWrapped = true
+		
 		GarageButton.MouseButton1Down:connect(
 			function()
 				shared.teleport = true
@@ -463,16 +1006,22 @@ if data.StatusCode == 200 then
 			end
 		)
 
-		VibeLiftButton.Name = "Vibe Lift Button"
-		VibeLiftButton.Parent = FrameImage
-		VibeLiftButton.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
-		VibeLiftButton.Position = UDim2.new(0.366946787, 0, 0.657894731, 0)
-		VibeLiftButton.Size = UDim2.new(0, 94, 0, 33)
-		VibeLiftButton.Font = Enum.Font.SourceSans
-		VibeLiftButton.Text = "Vibe Button "
-		VibeLiftButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-		VibeLiftButton.TextSize = 14.000
-		VibeLiftButton.MouseButton1Down:connect(
+		
+		
+VibeButton.Name = "VibeButton"
+VibeButton.Parent = CriminalityTp
+VibeButton.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
+VibeButton.BorderColor3 = Color3.fromRGB(86, 86, 86)
+VibeButton.Position = UDim2.new(0.0909999982, 0, 0.632000029, 0)
+VibeButton.Size = UDim2.new(0.817427814, 0, 0.112289496, 0)
+VibeButton.Font = Enum.Font.Nunito
+VibeButton.Text = "Vibe Button"
+VibeButton.TextColor3 = Color3.fromRGB(234, 234, 234)
+VibeButton.TextScaled = true
+VibeButton.TextSize = 14.000
+VibeButton.TextWrapped = true
+		
+		VibeButton.MouseButton1Down:connect(
 			function()
 				shared.teleport = true
 
@@ -517,445 +1066,114 @@ if data.StatusCode == 200 then
 				end
 			end
 		)
+		
+SectionCriminality.Name = "SectionCriminality"
+SectionCriminality.Parent = MAIN
+SectionCriminality.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+SectionCriminality.BackgroundTransparency = 0.100
+SectionCriminality.Position = UDim2.new(0, 0, 0.0700000003, 0)
+SectionCriminality.Size = UDim2.new(1, 0, 0.0606060885, 0)
 
-		local function RNVPQB_fake_script() -- FrameImage.LocalScript
-			local script = Instance.new("LocalScript", FrameImage)
+Main.Name = "Main"
+Main.Parent = SectionCriminality
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BackgroundTransparency = 1.000
+Main.Position = UDim2.new(0.00606060028, 0, 0.0999999493, 0)
+Main.Size = UDim2.new(0.231000006, 0, 0.899999976, 0)
+Main.Font = Enum.Font.Nunito
+Main.Text = "Main"
+Main.TextColor3 = Color3.fromRGB(234, 234, 234)
+Main.TextScaled = true
+Main.TextSize = 14.000
+Main.TextWrapped = true
 
-			player = game.Players.LocalPlayer
+ActivatedBar.Name = "ActivatedBar"
+ActivatedBar.Parent = Main
+ActivatedBar.BackgroundColor3 = Color3.fromRGB(163, 44, 193)
+ActivatedBar.Position = UDim2.new(0, 0, 1, 0)
+ActivatedBar.Size = UDim2.new(1, 0, 0, 3)
 
-			player:GetMouse().KeyDown:Connect(
-			function(key)
-				if key == "z" and script.Parent.Visible == false then
-					script.Parent.Visible = true
-				else
-					if key == "z" and script.Parent.Visible == true then
-						script.Parent.Visible = false
+Settings.Name = "Settings"
+Settings.Parent = SectionCriminality
+Settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings.BackgroundTransparency = 1.000
+Settings.Position = UDim2.new(0.23636362, 0, 0.0999999493, 0)
+Settings.Size = UDim2.new(0.231000006, 0, 0.899999976, 0)
+Settings.Font = Enum.Font.Nunito
+Settings.Text = "Settings"
+Settings.TextColor3 = Color3.fromRGB(234, 234, 234)
+Settings.TextScaled = true
+Settings.TextSize = 14.000
+Settings.TextWrapped = true
+
+ActivatedBar_2.Name = "ActivatedBar"
+ActivatedBar_2.Parent = Settings
+ActivatedBar_2.BackgroundColor3 = Color3.fromRGB(163, 44, 193)
+ActivatedBar_2.Position = UDim2.new(0, 0, 1, 0)
+ActivatedBar_2.Size = UDim2.new(1, 0, 0, 3)
+ActivatedBar_2.Visible = false
+
+-- Scripts:
+
+local function MCIN_fake_script() -- Main.LocalScript 
+	local script = Instance.new('LocalScript', Main)
+
+	
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.BunkerHillFrame.BunkerHillMain.Visible = true
+		script.Parent.ActivatedBar.Visible = true
+		script.Parent.Parent.Parent.BunkerHillFrame.BunkerHillSettings.Visible = false
+		script.Parent.Parent.Settings.ActivatedBar.Visible = false
+	end)
+end
+coroutine.wrap(MCIN_fake_script)()
+local function CVKCKH_fake_script() -- Settings.LocalScript 
+	local script = Instance.new('LocalScript', Settings)
+
+	
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.BunkerHillFrame.BunkerHillSettings.Visible = true
+		script.Parent.ActivatedBar.Visible = true
+		script.Parent.Parent.Parent.BunkerHillFrame.BunkerHillMain.Visible = false
+		script.Parent.Parent.Main.ActivatedBar.Visible = false
+	end)
+end
+coroutine.wrap(CVKCKH_fake_script)()
+local function RZFTUX_fake_script() -- ConsumerHubCriminality.OpenClose 
+	local script = Instance.new('LocalScript', ConsumerHubCriminality)
+
+	
+	
+	local UserInputService = game:GetService("UserInputService")
+	
+	
+	UserInputService.InputBegan:Connect(function(input, isTyping)
+		
+		if isTyping then
+			
+			return end
+		
+			if input.KeyCode == Enum.KeyCode.LeftAlt then
+				
+			if script.Parent.MAIN.Visible == true then
+					script.Parent.MAIN.Visible = false
+				else if script.Parent.MAIN.Visible == false then
+						script.Parent.MAIN.Visible = true
 					end
-				end
-			end
-			)
+					end
 		end
-		coroutine.wrap(RNVPQB_fake_script)()
-
-		local ScreenGui = Instance.new("ScreenGui")
-		local Frame = Instance.new("Frame")
-		local FrameImage = Instance.new("ImageLabel")
-		local DealerESPButton = Instance.new("TextButton")
-		local DealerESP = Instance.new("TextLabel")
-		local ESPButton = Instance.new("TextButton")
-		local ESP = Instance.new("TextLabel")
-		local FallDamage = Instance.new("TextButton")
-		local NoFallDamage = Instance.new("TextLabel")
-		local fastpickupButton = Instance.new("TextButton")
-		local FastPickup = Instance.new("TextLabel")
-		local FullBrightButton = Instance.new("TextButton")
-		local FullBright = Instance.new("TextLabel")
-		local HBEButton = Instance.new("TextButton")
-		local HBE = Instance.new("TextLabel")
-		local InfstamButton = Instance.new("TextButton")
-		local InfiniteStamina = Instance.new("TextLabel")
-		local NoRecoilbutton = Instance.new("TextButton")
-		local NoRecoil = Instance.new("TextLabel")
-		local SafeESPButton = Instance.new("TextButton")
-		local SafeESP = Instance.new("TextLabel")
-		local scrapespButton = Instance.new("TextButton")
-		local ScrapESP = Instance.new("TextLabel")
-		local Verison = Instance.new("TextLabel")
-		local Tittle = Instance.new("TextLabel")
-		local KeybindFrame = Instance.new("ImageLabel")
-		local Keybinds = Instance.new("TextLabel")
-		local Keybinds_2 = Instance.new("TextLabel")
-		local Keybinds_3 = Instance.new("TextLabel")
-		local Keybinds_4 = Instance.new("TextLabel")
-		local Message = Instance.new("TextLabel")
-		local X = Instance.new("TextButton")
-		local X_2 = Instance.new("TextButton")
-		local WarningImage = Instance.new("ImageLabel")
-		local WarningText = Instance.new("TextLabel")
-		local ImageLabel = Instance.new("ImageLabel")
-
-		--Properties:
-
-		if syn then syn.protect_gui(ScreenGui) end
-		ScreenGui.Parent = game.CoreGui
-		ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-		Frame.Parent = ScreenGui
-		Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Frame.BackgroundTransparency = 1.000
-		Frame.Position = UDim2.new(0.650000036, 0, 0.232279584, 0)
-		Frame.Size = UDim2.new(0, 579, 0, 390)
-
-		FrameImage.Name = "Frame Image"
-		FrameImage.Parent = Frame
-		FrameImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		FrameImage.BackgroundTransparency = 1.000
-		FrameImage.Position = UDim2.new(0.0390882194, 0, 0.0746825263, 0)
-		FrameImage.Size = UDim2.new(0, 533, 0, 334)
-		FrameImage.Image = "http://www.roblox.com/asset/?id=5835708699"
-		FrameImage.Active = true
-		FrameImage.Draggable = true
-
-		DealerESPButton.Name = "Dealer ESP Button"
-		DealerESPButton.Parent = FrameImage
-		DealerESPButton.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
-		DealerESPButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-		DealerESPButton.Position = UDim2.new(0.406311601, 0, 0.745349288, 0)
-		DealerESPButton.Size = UDim2.new(0, 24, 0, 23)
-		DealerESPButton.Font = Enum.Font.SourceSans
-		DealerESPButton.Text = ""
-		DealerESPButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-		DealerESPButton.TextSize = 14.000
-
-		DealerESP.Name = "Dealer ESP"
-		DealerESP.Parent = DealerESPButton
-		DealerESP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		DealerESP.BackgroundTransparency = 1.000
-		DealerESP.Position = UDim2.new(-0.458333254, 0, 0, 0)
-		DealerESP.Size = UDim2.new(0, 150, 0, 20)
-		DealerESP.Font = Enum.Font.SourceSans
-		DealerESP.Text = "Dealer ESP"
-		DealerESP.TextColor3 = Color3.fromRGB(0, 0, 0)
-		DealerESP.TextSize = 16.000
-		DealerESP.TextWrapped = true
-
-		ESPButton.Name = "ESP Button"
-		ESPButton.Parent = FrameImage
-		ESPButton.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
-		ESPButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-		ESPButton.Position = UDim2.new(0.0315581858, 0, 0.241573021, 0)
-		ESPButton.Size = UDim2.new(0, 24, 0, 23)
-		ESPButton.Font = Enum.Font.SourceSans
-		ESPButton.Text = ""
-		ESPButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-		ESPButton.TextSize = 14.000
-
-		ESP.Name = "ESP"
-		ESP.Parent = ESPButton
-		ESP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		ESP.BackgroundTransparency = 1.000
-		ESP.Position = UDim2.new(-0.333333462, 0, 4.84287739e-08, 0)
-		ESP.Size = UDim2.new(0, 101, 0, 20)
-		ESP.Font = Enum.Font.SourceSans
-		ESP.Text = "ESP"
-		ESP.TextColor3 = Color3.fromRGB(0, 0, 0)
-		ESP.TextSize = 16.000
-		ESP.TextWrapped = true
-
-		FallDamage.Name = "Fall Damage"
-		FallDamage.Parent = FrameImage
-		FallDamage.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
-		FallDamage.BorderColor3 = Color3.fromRGB(0, 0, 0)
-		FallDamage.Position = UDim2.new(0.406311601, 0, 0.619641483, 0)
-		FallDamage.Size = UDim2.new(0, 24, 0, 23)
-		FallDamage.Font = Enum.Font.SourceSans
-		FallDamage.Text = ""
-		FallDamage.TextColor3 = Color3.fromRGB(0, 0, 0)
-		FallDamage.TextSize = 14.000
-
-		NoFallDamage.Name = "No Fall Damage"
-		NoFallDamage.Parent = FallDamage
-		NoFallDamage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		NoFallDamage.BackgroundTransparency = 1.000
-		NoFallDamage.Size = UDim2.new(0, 150, 0, 20)
-		NoFallDamage.Font = Enum.Font.SourceSans
-		NoFallDamage.Text = "No Fall Damage"
-		NoFallDamage.TextColor3 = Color3.fromRGB(0, 0, 0)
-		NoFallDamage.TextSize = 16.000
-		NoFallDamage.TextWrapped = true
-
-		fastpickupButton.Name = "fast pickup Button"
-		fastpickupButton.Parent = FrameImage
-		fastpickupButton.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
-		fastpickupButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-		fastpickupButton.Position = UDim2.new(0.406311601, 0, 0.486173719, 0)
-		fastpickupButton.Size = UDim2.new(0, 24, 0, 23)
-		fastpickupButton.Font = Enum.Font.SourceSans
-		fastpickupButton.Text = ""
-		fastpickupButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-		fastpickupButton.TextSize = 14.000
-
-		FastPickup.Name = "Fast Pickup"
-		FastPickup.Parent = fastpickupButton
-		FastPickup.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		FastPickup.BackgroundTransparency = 1.000
-		FastPickup.Position = UDim2.new(0.375000298, 0, 4.76837158e-07, 0)
-		FastPickup.Size = UDim2.new(0, 109, 0, 20)
-		FastPickup.Font = Enum.Font.SourceSans
-		FastPickup.Text = "Fast Pickup"
-		FastPickup.TextColor3 = Color3.fromRGB(0, 0, 0)
-		FastPickup.TextSize = 16.000
-		FastPickup.TextWrapped = true
-
-		FullBrightButton.Name = "Full Bright Button"
-		FullBrightButton.Parent = FrameImage
-		FullBrightButton.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
-		FullBrightButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-		FullBrightButton.Position = UDim2.new(0.406311631, 0, 0.359509528, 0)
-		FullBrightButton.Size = UDim2.new(0, 24, 0, 23)
-		FullBrightButton.Font = Enum.Font.SourceSans
-		FullBrightButton.Text = ""
-		FullBrightButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-		FullBrightButton.TextSize = 14.000
-
-		FullBright.Name = "Full Bright"
-		FullBright.Parent = FullBrightButton
-		FullBright.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		FullBright.BackgroundTransparency = 1.000
-		FullBright.Position = UDim2.new(0.208333686, 0, 0.0869570002, 0)
-		FullBright.Size = UDim2.new(0, 109, 0, 20)
-		FullBright.Font = Enum.Font.SourceSans
-		FullBright.Text = "Fullbright"
-		FullBright.TextColor3 = Color3.fromRGB(0, 0, 0)
-		FullBright.TextSize = 16.000
-		FullBright.TextWrapped = true
-
-		HBEButton.Name = "HBE Button"
-		HBEButton.Parent = FrameImage
-		HBEButton.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
-		HBEButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-		HBEButton.Position = UDim2.new(0.406311631, 0, 0.241387978, 0)
-		HBEButton.Size = UDim2.new(0, 24, 0, 23)
-		HBEButton.Font = Enum.Font.SourceSans
-		HBEButton.Text = ""
-		HBEButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-		HBEButton.TextSize = 14.000
-
-		HBE.Name = "HBE"
-		HBE.Parent = HBEButton
-		HBE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		HBE.BackgroundTransparency = 1.000
-		HBE.Position = UDim2.new(-0.374999762, 0, 0.0434787385, 0)
-		HBE.Size = UDim2.new(0, 109, 0, 20)
-		HBE.Font = Enum.Font.SourceSans
-		HBE.Text = "HBE "
-		HBE.TextColor3 = Color3.fromRGB(0, 0, 0)
-		HBE.TextSize = 16.000
-		HBE.TextWrapped = true
-
-		InfstamButton.Name = "Inf stam Button"
-		InfstamButton.Parent = FrameImage
-		InfstamButton.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
-		InfstamButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-		InfstamButton.Position = UDim2.new(0.0315581858, 0, 0.363503307, 0)
-		InfstamButton.Size = UDim2.new(0, 24, 0, 23)
-		InfstamButton.Font = Enum.Font.SourceSans
-		InfstamButton.Text = ""
-		InfstamButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-		InfstamButton.TextSize = 14.000
-
-		InfiniteStamina.Name = "Infinite Stamina"
-		InfiniteStamina.Parent = InfstamButton
-		InfiniteStamina.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		InfiniteStamina.BackgroundTransparency = 1.000
-		InfiniteStamina.Position = UDim2.new(0.999999881, 0, 0.0434783101, 0)
-		InfiniteStamina.Size = UDim2.new(0, 101, 0, 20)
-		InfiniteStamina.Font = Enum.Font.SourceSans
-		InfiniteStamina.Text = "Infinite Stamina"
-		InfiniteStamina.TextColor3 = Color3.fromRGB(0, 0, 0)
-		InfiniteStamina.TextSize = 16.000
-		InfiniteStamina.TextWrapped = true
-
-		NoRecoilbutton.Name = "No Recoil button"
-		NoRecoilbutton.Parent = FrameImage
-		NoRecoilbutton.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
-		NoRecoilbutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-		NoRecoilbutton.Position = UDim2.new(0.0315581858, 0, 0.747164607, 0)
-		NoRecoilbutton.Size = UDim2.new(0, 24, 0, 23)
-		NoRecoilbutton.Font = Enum.Font.SourceSans
-		NoRecoilbutton.Text = ""
-		NoRecoilbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
-		NoRecoilbutton.TextSize = 14.000
-
-		NoRecoil.Name = "No Recoil"
-		NoRecoil.Parent = NoRecoilbutton
-		NoRecoil.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		NoRecoil.BackgroundTransparency = 1.000
-		NoRecoil.Position = UDim2.new(0.333333224, 0, 0.0434783176, 0)
-		NoRecoil.Size = UDim2.new(0, 101, 0, 20)
-		NoRecoil.Font = Enum.Font.SourceSans
-		NoRecoil.Text = "No Recoil"
-		NoRecoil.TextColor3 = Color3.fromRGB(0, 0, 0)
-		NoRecoil.TextSize = 16.000
-		NoRecoil.TextWrapped = true
-
-		SafeESPButton.Name = "Safe ESP Button"
-		SafeESPButton.Parent = FrameImage
-		SafeESPButton.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
-		SafeESPButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-		SafeESPButton.Position = UDim2.new(0.0315581858, 0, 0.620635152, 0)
-		SafeESPButton.Size = UDim2.new(0, 24, 0, 23)
-		SafeESPButton.Font = Enum.Font.SourceSans
-		SafeESPButton.Text = ""
-		SafeESPButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-		SafeESPButton.TextSize = 14.000
-
-		SafeESP.Name = "Safe ESP"
-		SafeESP.Parent = SafeESPButton
-		SafeESP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		SafeESP.BackgroundTransparency = 1.000
-		SafeESP.Position = UDim2.new(0, 0, 0.043478258, 0)
-		SafeESP.Size = UDim2.new(0, 109, 0, 20)
-		SafeESP.Font = Enum.Font.SourceSans
-		SafeESP.Text = "Safe ESP"
-		SafeESP.TextColor3 = Color3.fromRGB(0, 0, 0)
-		SafeESP.TextSize = 16.000
-		SafeESP.TextWrapped = true
-
-		scrapespButton.Name = "scrap esp Button"
-		scrapespButton.Parent = FrameImage
-		scrapespButton.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
-		scrapespButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-		scrapespButton.Position = UDim2.new(0.0315581858, 0, 0.492346764, 0)
-		scrapespButton.Size = UDim2.new(0, 24, 0, 23)
-		scrapespButton.Font = Enum.Font.SourceSans
-		scrapespButton.Text = ""
-		scrapespButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-		scrapespButton.TextSize = 14.000
-
-		ScrapESP.Name = "Scrap ESP"
-		ScrapESP.Parent = scrapespButton
-		ScrapESP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		ScrapESP.BackgroundTransparency = 1.000
-		ScrapESP.Position = UDim2.new(0.291666538, 0, 4.84287739e-08, 0)
-		ScrapESP.Size = UDim2.new(0, 101, 0, 20)
-		ScrapESP.Font = Enum.Font.SourceSans
-		ScrapESP.Text = "Scrap ESP"
-		ScrapESP.TextColor3 = Color3.fromRGB(0, 0, 0)
-		ScrapESP.TextSize = 16.000
-		ScrapESP.TextWrapped = true
-
-		Verison.Name = "Verison"
-		Verison.Parent = FrameImage
-		Verison.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Verison.BackgroundTransparency = 1.000
-		Verison.Position = UDim2.new(0.761333168, 0, 0.0942808166, 0)
-		Verison.Size = UDim2.new(0, 200, 0, 50)
-		Verison.Font = Enum.Font.Michroma
-		Verison.Text = "V3"
-		Verison.TextColor3 = Color3.fromRGB(0, 0, 0)
-		Verison.TextSize = 14.000
-
-		Tittle.Name = "Tittle"
-		Tittle.Parent = FrameImage
-		Tittle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Tittle.BackgroundTransparency = 1.000
-		Tittle.Position = UDim2.new(-0.0131332083, 0, 0.0269562043, 0)
-		Tittle.Size = UDim2.new(0, 132, 0, 22)
-		Tittle.Font = Enum.Font.SourceSans
-		Tittle.Text = "ConsumerHub"
-		Tittle.TextColor3 = Color3.fromRGB(255, 255, 255)
-		Tittle.TextScaled = true
-		Tittle.TextSize = 20.000
-		Tittle.TextWrapped = true
-
-		KeybindFrame.Name = "Keybind Frame"
-		KeybindFrame.Parent = FrameImage
-		KeybindFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		KeybindFrame.BackgroundTransparency = 1.000
-		KeybindFrame.Position = UDim2.new(0.697662115, 0, 0.308383226, 0)
-		KeybindFrame.Size = UDim2.new(0, 127, 0, 127)
-		KeybindFrame.Image = "http://www.roblox.com/asset/?id=5838817871"
-
-		Keybinds.Name = "Keybinds"
-		Keybinds.Parent = KeybindFrame
-		Keybinds.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Keybinds.BackgroundTransparency = 1.000
-		Keybinds.Position = UDim2.new(-0.275590539, 0, 0.14173229, 0)
-		Keybinds.Size = UDim2.new(0, 200, 0, 50)
-		Keybinds.Font = Enum.Font.Nunito
-		Keybinds.Text = "Keybinds"
-		Keybinds.TextColor3 = Color3.fromRGB(0, 0, 0)
-		Keybinds.TextSize = 21.000
-
-		Keybinds_2.Name = "Keybinds"
-		Keybinds_2.Parent = KeybindFrame
-		Keybinds_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Keybinds_2.BackgroundTransparency = 1.000
-		Keybinds_2.Position = UDim2.new(-0.275590539, 0, 0.299212605, 0)
-		Keybinds_2.Size = UDim2.new(0, 200, 0, 50)
-		Keybinds_2.Font = Enum.Font.Nunito
-		Keybinds_2.Text = "Y - Aimlock"
-		Keybinds_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-		Keybinds_2.TextSize = 15.000
-
-		Keybinds_3.Name = "Keybinds"
-		Keybinds_3.Parent = KeybindFrame
-		Keybinds_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Keybinds_3.BackgroundTransparency = 1.000
-		Keybinds_3.Position = UDim2.new(-0.275590539, 0, 0.480315, 0)
-		Keybinds_3.Size = UDim2.new(0, 200, 0, 50)
-		Keybinds_3.Font = Enum.Font.Nunito
-		Keybinds_3.Text = "T - HBE"
-		Keybinds_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-		Keybinds_3.TextSize = 15.000
-
-		Keybinds_4.Name = "Keybinds"
-		Keybinds_4.Parent = KeybindFrame
-		Keybinds_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Keybinds_4.BackgroundTransparency = 1.000
-		Keybinds_4.Position = UDim2.new(-0.275590539, 0, 0.661417365, 0)
-		Keybinds_4.Size = UDim2.new(0, 200, 0, 50)
-		Keybinds_4.Font = Enum.Font.Nunito
-		Keybinds_4.Text = "Z - GUI"
-		Keybinds_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-		Keybinds_4.TextSize = 15.000
-
-		Message.Name = "Message"
-		Message.Parent = FrameImage
-		Message.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Message.BackgroundTransparency = 1.000
-		Message.Position = UDim2.new(0.474671692, 0, 0.0269462466, 0)
-		Message.Size = UDim2.new(0, 153, 0, 20)
-		Message.Font = Enum.Font.SourceSans
-		Message.Text = "Created By Consuming#1969"
-		Message.TextColor3 = Color3.fromRGB(255, 255, 255)
-		Message.TextScaled = true
-		Message.TextSize = 14.000
-		Message.TextWrapped = true
-
-		X.Name = "X"
-		X.Parent = FrameImage
-		X.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		X.BackgroundTransparency = 1.000
-		X.Position = UDim2.new(0.93433398, 0, 0.0269462448, 0)
-		X.Size = UDim2.new(0, 24, 0, 20)
-		X.Font = Enum.Font.SourceSans
-		X.Text = ""
-		X.TextColor3 = Color3.fromRGB(0, 0, 0)
-		X.TextSize = 14.000
-
-		X_2.Name = "X"
-		X_2.Parent = FrameImage
-		X_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		X_2.BackgroundTransparency = 1.000
-		X_2.Position = UDim2.new(0.885553479, 0, 0.329341412, 0)
-		X_2.Size = UDim2.new(0, 17, 0, 19)
-		X_2.Font = Enum.Font.SourceSans
-		X_2.Text = ""
-		X_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-		X_2.TextSize = 14.000
-
-		WarningImage.Name = "Warning Image"
-		WarningImage.Parent = FrameImage
-		WarningImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		WarningImage.BackgroundTransparency = 1.000
-		WarningImage.Position = UDim2.new(0.030018758, 0, 0.883233428, 0)
-		WarningImage.Size = UDim2.new(0, 25, 0, 25)
-		WarningImage.Image = "http://www.roblox.com/asset/?id=5631336371"
-
-		WarningText.Name = "Warning Text"
-		WarningText.Parent = FrameImage
-		WarningText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		WarningText.BackgroundTransparency = 1.000
-		WarningText.Position = UDim2.new(0.0300187618, 0, 0.844311357, 0)
-		WarningText.Size = UDim2.new(0, 200, 0, 50)
-		WarningText.Font = Enum.Font.SourceSans
-		WarningText.Text = "Be Smart Dont Get Caught"
-		WarningText.TextColor3 = Color3.fromRGB(0, 0, 0)
-		WarningText.TextSize = 14.000
-
-		-- doing this so the code at the bottom doesnt look like shit
+		
+	end)
+end
+		coroutine.wrap(RZFTUX_fake_script)()
+		
+		
+		
+		
 		local NameResolve = {
 			ESP = "ESP Button",
 			InfStamina = "Inf stam Button",
@@ -975,32 +1193,14 @@ if data.StatusCode == 200 then
 				{
 					__index = function(tab, idx)
 						assert(NameResolve[idx], "ayo invalid setting")
-						return FrameImage[NameResolve[idx]].BackgroundColor3.G == 1
+						return CriminalityMain[NameResolve[idx]].BackgroundColor3.G == 1
 					end
 				}
 			)
 
-		local function DXEAPY_fake_script() -- FrameImage.LocalScript
-			local script = Instance.new("LocalScript", FrameImage)
-
-			player = game.Players.LocalPlayer
-
-			player:GetMouse().KeyDown:Connect(
-			function(key)
-				if key == "z" and script.Parent.Visible == false then
-					script.Parent.Visible = true
-				else
-					if key == "z" and script.Parent.Visible == true then
-						script.Parent.Visible = false
-					end
-				end
-			end
-			)
-		end
-
-		coroutine.wrap(DXEAPY_fake_script)()
+	
 		local function ADJT_fake_script() -- DealerESPButton.LocalScript
-			local script = Instance.new("LocalScript", DealerESPButton)
+			local script = Instance.new("LocalScript", DealerEsp_2)
 
 			local toggle = false
 			script.Parent.MouseButton1Down:connect(
@@ -1014,7 +1214,7 @@ if data.StatusCode == 200 then
 						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
 					end
 					if toggle == false then
-						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
+						script.Parent.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
 					end
 
 					if toggle == true then
@@ -1028,7 +1228,7 @@ if data.StatusCode == 200 then
 		end
 		coroutine.wrap(ADJT_fake_script)()
 		local function YMUUKK_fake_script() -- ESPButton.LocalScript
-			local script = Instance.new("LocalScript", ESPButton)
+			local script = Instance.new("LocalScript", ESPbutton)
 
 			local toggle = false
 			script.Parent.MouseButton1Down:connect(
@@ -1042,7 +1242,7 @@ if data.StatusCode == 200 then
 						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
 					end
 					if toggle == false then
-						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
+						script.Parent.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
 					end
 
 					if toggle == true then
@@ -1059,7 +1259,7 @@ if data.StatusCode == 200 then
 
 		coroutine.wrap(YMUUKK_fake_script)()
 		local function ALIQB_fake_script() -- FallDamage.LocalScript
-			local script = Instance.new("LocalScript", FallDamage)
+			local script = Instance.new("LocalScript", NoFallDamage_2)
 
 			local toggle = false
 			script.Parent.MouseButton1Down:connect(
@@ -1074,7 +1274,7 @@ if data.StatusCode == 200 then
 						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
 					end
 					if toggle == false then
-						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
+						script.Parent.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
 					end
 
 					if toggle == true then
@@ -1091,7 +1291,7 @@ if data.StatusCode == 200 then
 
 		coroutine.wrap(ALIQB_fake_script)()
 		local function ILYVRAX_fake_script() -- fastpickupButton.LocalScript
-			local script = Instance.new("LocalScript", fastpickupButton)
+			local script = Instance.new("LocalScript", FastPickup_2)
 
 			local toggle = false
 			script.Parent.MouseButton1Down:connect(
@@ -1106,7 +1306,7 @@ if data.StatusCode == 200 then
 						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
 					end
 					if toggle == false then
-						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
+						script.Parent.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
 					end
 
 					if toggle == true then
@@ -1123,7 +1323,7 @@ if data.StatusCode == 200 then
 
 		coroutine.wrap(ILYVRAX_fake_script)()
 		local function BVRY_fake_script() -- FullBrightButton.LocalScript
-			local script = Instance.new("LocalScript", FullBrightButton)
+			local script = Instance.new("LocalScript", FullBright_2)
 
 			local toggle = false
 			script.Parent.MouseButton1Down:connect(
@@ -1138,7 +1338,7 @@ if data.StatusCode == 200 then
 						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
 					end
 					if toggle == false then
-						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
+						script.Parent.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
 					end
 
 					if toggle == true then
@@ -1152,12 +1352,12 @@ if data.StatusCode == 200 then
 		end
 		coroutine.wrap(BVRY_fake_script)()
 		local function CJMZZOQ_fake_script() -- HBEButton.LocalScript
-			local script = Instance.new("LocalScript", HBEButton)
+			local script = Instance.new("LocalScript", bigHead)
 
 			script.Parent.MouseButton1Down:connect(
 				function()
-					FrameImage[NameResolve.HBE].BackgroundColor3 =
-						settings.HBE and Color3.fromRGB(0, 0, 128) or Color3.fromRGB(0, 255, 0)
+					CriminalityMain[NameResolve.HBE].BackgroundColor3 =
+						settings.HBE and Color3.fromRGB(27, 27, 27) or Color3.fromRGB(0, 255, 0)
 				end
 			)
 		end
@@ -1166,7 +1366,7 @@ if data.StatusCode == 200 then
 
 		coroutine.wrap(CJMZZOQ_fake_script)()
 		local function VCBG_fake_script() -- InfstamButton.LocalScript
-			local script = Instance.new("LocalScript", InfstamButton)
+			local script = Instance.new("LocalScript", infstamina)
 
 			local toggle = false
 			script.Parent.MouseButton1Down:connect(
@@ -1181,7 +1381,7 @@ if data.StatusCode == 200 then
 						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
 					end
 					if toggle == false then
-						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
+						script.Parent.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
 					end
 
 					if toggle == true then
@@ -1197,7 +1397,7 @@ if data.StatusCode == 200 then
 		local NoRecoil = settings.NoRecoil
 		coroutine.wrap(VCBG_fake_script)()
 		local function DRBL_fake_script() -- NoRecoilbutton.LocalScript
-			local script = Instance.new("LocalScript", NoRecoilbutton)
+			local script = Instance.new("LocalScript", NoRecoil_2)
 
 			local toggle = false
 			script.Parent.MouseButton1Down:connect(
@@ -1212,7 +1412,7 @@ if data.StatusCode == 200 then
 						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
 					end
 					if toggle == false then
-						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
+						script.Parent.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
 					end
 
 					if toggle == true then
@@ -1226,7 +1426,7 @@ if data.StatusCode == 200 then
 		end
 		coroutine.wrap(DRBL_fake_script)()
 		local function MTDYQB_fake_script() -- SafeESPButton.LocalScript
-			local script = Instance.new("LocalScript", SafeESPButton)
+			local script = Instance.new("LocalScript", safeEsp)
 
 			local toggle = false
 			script.Parent.MouseButton1Down:connect(
@@ -1240,7 +1440,7 @@ if data.StatusCode == 200 then
 						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
 					end
 					if toggle == false then
-						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
+						script.Parent.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
 					end
 
 					if toggle == true then
@@ -1254,7 +1454,7 @@ if data.StatusCode == 200 then
 		end
 		coroutine.wrap(MTDYQB_fake_script)()
 		local function WXXAND_fake_script() -- scrapespButton.LocalScript
-			local script = Instance.new("LocalScript", scrapespButton)
+			local script = Instance.new("LocalScript", scrapEsp)
 
 			local toggle = false
 			script.Parent.MouseButton1Down:connect(
@@ -1268,7 +1468,7 @@ if data.StatusCode == 200 then
 						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
 					end
 					if toggle == false then
-						script.Parent.BackgroundColor3 = Color3.fromRGB(0, 0, 128)
+						script.Parent.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
 					end
 
 					if toggle == true then
@@ -1894,8 +2094,8 @@ if data.StatusCode == 200 then
 		game.UserInputService.InputBegan:Connect(
 			function(InputObject)
 				if (InputObject.KeyCode == _G.HBEToggleKey) then
-					FrameImage[NameResolve.HBE].BackgroundColor3 =
-						settings.HBE and Color3.fromRGB(0, 0, 128) or Color3.fromRGB(0, 255, 0)
+					CriminalityMain[NameResolve.HBE].BackgroundColor3 =
+						settings.HBE and Color3.fromRGB(27, 27, 27) or Color3.fromRGB(0, 255, 0)
 				end
 			end
 		)
