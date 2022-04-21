@@ -1,0 +1,180 @@
+
+if game.CoreGui:FindFirstChild("Login") then
+	print("Already Injected")
+else
+	
+
+local Login = Instance.new("ScreenGui")
+local LoginMain = Instance.new("ImageLabel")
+local tittle = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+local LoginConfirm = Instance.new("TextButton")
+local LoginConfirm_Roundify_12px = Instance.new("ImageLabel")
+local Enter = Instance.new("TextBox")
+local Back = Instance.new("ImageLabel")
+
+--Properties:
+
+Login.Name = "Login"
+
+Login.DisplayOrder = 99999999
+	Login.Parent = game:GetService("Players").LocalPlayer.PlayerGui
+LoginMain.Name = "LoginMain"
+LoginMain.Parent = Login
+LoginMain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoginMain.BackgroundTransparency = 1.000
+LoginMain.Position = UDim2.new(0.370889157, 0, 0.325681478, 0)
+LoginMain.Size = UDim2.new(0.257125437, 0, 0.348637015, 0)
+LoginMain.ZIndex = 2
+LoginMain.Image = "rbxassetid://3570695787"
+LoginMain.ImageColor3 = Color3.fromRGB(121, 121, 121)
+LoginMain.ScaleType = Enum.ScaleType.Slice
+LoginMain.SliceCenter = Rect.new(100, 100, 100, 100)
+LoginMain.SliceScale = 0.120
+	LoginMain.Active = true
+tittle.Name = "tittle"
+tittle.Parent = LoginMain
+tittle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+tittle.BackgroundTransparency = 1.000
+tittle.Size = UDim2.new(0.999999881, 0, 0.349000007, 0)
+tittle.ZIndex = 3
+tittle.Font = Enum.Font.Nunito
+tittle.Text = "ConsumerHub"
+tittle.TextColor3 = Color3.fromRGB(0, 0, 0)
+tittle.TextScaled = true
+tittle.TextSize = 14.000
+tittle.TextWrapped = true
+
+Frame.Parent = LoginMain
+Frame.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0, 0, 0.319999993, 0)
+Frame.Size = UDim2.new(1.00000012, 0, 0.0370370336, 0)
+Frame.ZIndex = 2
+
+LoginConfirm.Name = "LoginConfirm"
+LoginConfirm.Parent = LoginMain
+LoginConfirm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoginConfirm.BackgroundTransparency = 1.000
+LoginConfirm.BorderSizePixel = 0
+LoginConfirm.Position = UDim2.new(0.30317387, 0, 0.724279881, 0)
+LoginConfirm.Size = UDim2.new(0.393652737, 0, 0.218106985, 0)
+LoginConfirm.ZIndex = 4
+LoginConfirm.Font = Enum.Font.SourceSans
+LoginConfirm.Text = "Login"
+LoginConfirm.TextColor3 = Color3.fromRGB(209, 209, 209)
+LoginConfirm.TextScaled = true
+LoginConfirm.TextSize = 14.000
+LoginConfirm.TextWrapped = true
+
+LoginConfirm_Roundify_12px.Name = "LoginConfirm_Roundify_12px"
+LoginConfirm_Roundify_12px.Parent = LoginConfirm
+LoginConfirm_Roundify_12px.Active = true
+LoginConfirm_Roundify_12px.AnchorPoint = Vector2.new(0.5, 0.5)
+LoginConfirm_Roundify_12px.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoginConfirm_Roundify_12px.BackgroundTransparency = 1.000
+LoginConfirm_Roundify_12px.Position = UDim2.new(0.5, 0, 0.5, 0)
+LoginConfirm_Roundify_12px.Selectable = true
+LoginConfirm_Roundify_12px.Size = UDim2.new(1, 0, 1, 0)
+LoginConfirm_Roundify_12px.ZIndex = 3
+LoginConfirm_Roundify_12px.Image = "rbxassetid://3570695787"
+LoginConfirm_Roundify_12px.ImageColor3 = Color3.fromRGB(59, 59, 59)
+LoginConfirm_Roundify_12px.ScaleType = Enum.ScaleType.Slice
+LoginConfirm_Roundify_12px.SliceCenter = Rect.new(100, 100, 100, 100)
+LoginConfirm_Roundify_12px.SliceScale = 0.120
+
+Enter.Name = "Enter"
+Enter.Parent = LoginMain
+Enter.BackgroundColor3 = Color3.fromRGB(111, 111, 111)
+Enter.BorderColor3 = Color3.fromRGB(94, 94, 94)
+Enter.BorderSizePixel = 4
+Enter.Position = UDim2.new(0.116058744, 0, 0.444444418, 0)
+Enter.Size = UDim2.new(0.7682302, 0, 0.217999995, 0)
+Enter.ZIndex = 3
+Enter.Font = Enum.Font.SourceSans
+Enter.PlaceholderText = "Enter Key Here"
+Enter.Text = ""
+Enter.TextColor3 = Color3.fromRGB(0, 0, 0)
+Enter.TextScaled = true
+Enter.TextSize = 14.000
+Enter.TextWrapped = true
+
+Back.Name = "Back"
+Back.Parent = Login
+Back.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Back.BackgroundTransparency = 1.000
+Back.Position = UDim2.new(0.363581002, 0, 0.314203739, 0)
+Back.Size = UDim2.new(0.271132767, 0, 0.371592551, 0)
+Back.Image = "rbxassetid://3570695787"
+Back.ImageColor3 = Color3.fromRGB(80, 80, 80)
+Back.ScaleType = Enum.ScaleType.Slice
+Back.SliceCenter = Rect.new(100, 100, 100, 100)
+Back.SliceScale = 0.120
+
+
+
+	local function Login1_fake_script() -- OpenClose 
+		local script = Instance.new('LocalScript', LoginConfirm)
+		
+		LoginConfirm.MouseButton1Click:Connect(function()
+			if Enter.Text == "Co1nS?M7e" then
+				Enter.Text = "Correct Key"
+				wait(0.6)
+				Enter.Text = "Loading"
+				wait(0.3)
+				Enter.Text = "Loading."
+				wait(0.3)
+				Enter.Text = "Loading.."
+				wait(0.3)
+				Enter.Text = "Loading..."
+				wait(0.3)
+				Enter.Text = "Done!"
+				wait(1.2)
+				local log = game.Players.LocalPlayer.PlayerGui.Login
+				log.Enabled = false
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/ConsumingChef/ConsumerHub/main/LoadingString", true))()
+				print("hi")
+				
+		else
+			Enter.Text = "Wrong key!"
+			wait(0.6)
+			Enter.Text = ""
+		end
+		end)
+	end
+	coroutine.wrap(Login1_fake_script)()
+
+	
+	
+
+	local function OpenClose001_fake_script() -- OpenClose 
+		local script = Instance.new('LocalScript', LoginMain)
+
+
+
+		local UserInputService = game:GetService("UserInputService")
+
+
+		UserInputService.InputBegan:Connect(function(input, isTyping)
+
+			if isTyping then
+
+				return end
+			if input.KeyCode == Enum.KeyCode.LeftAlt then
+
+				if LoginMain.Visible == true then
+					LoginMain.Visible = false
+					Back.Visible = false
+				elseif LoginMain.Visible == false then
+					LoginMain.Visible = true
+					Back.Visible = true
+				end
+			end
+
+		end)
+	end
+	coroutine.wrap(OpenClose001_fake_script)()
+	
+
+
+end
