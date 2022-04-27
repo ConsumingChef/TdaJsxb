@@ -954,7 +954,7 @@ GarageButton.BorderColor3 = Color3.fromRGB(86, 86, 86)
 GarageButton.Position = UDim2.new(0.0909999982, 0, 0.758000016, 0)
 GarageButton.Size = UDim2.new(0.817427814, 0, 0.112289496, 0)
 GarageButton.Font = Enum.Font.Nunito
-GarageButton.Text = "Garage"
+GarageButton.Text = "Vibe Check Hidout"
 GarageButton.TextColor3 = Color3.fromRGB(234, 234, 234)
 GarageButton.TextScaled = true
 GarageButton.TextSize = 14.000
@@ -966,18 +966,18 @@ GarageButton.TextWrapped = true
 
 				local TPCFrame =
 					CFrame.new(
-						-3871.8999,
-						4.28348255,
-						-443.242493,
-						0.999999344,
-						-1.27568986e-08,
-						-0.00116379349,
-						1.2758723e-08,
+						-4865.10107,
+						-201.964798,
+						-868.89978,
+						-0.0204349328,
+						9.92780613e-08,
+						-0.999791205,
+						6.22468406e-08,
 						1,
-						1.5602869e-09,
-						0.00116379349,
-						-1.57513436e-09,
-						0.999999344
+						9.80265185e-08,
+						0.999791205,
+						-6.02306756e-08,
+						-0.0204349328
 					)
 				--Put a new cframe or cframe property in here
 				local User = game.Players.LocalPlayer.Character.HumanoidRootPart
