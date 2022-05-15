@@ -117,7 +117,7 @@ Back.SliceScale = 0.120
 		local script = Instance.new('LocalScript', LoginConfirm)
 		
 		LoginConfirm.MouseButton1Click:Connect(function()
-			if Enter.Text == "Co1nS?M7e" then
+			if Enter.Text == "NewRhS551" then
 				Enter.Text = "Correct Key"
 				wait(0.6)
 				Enter.Text = "Loading"
