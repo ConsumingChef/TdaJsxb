@@ -1,0 +1,11 @@
+local WhereTheScriptGoes = workspace.part
+local function Clone_fake_script() 
+		local script = Instance.new('Script', WhereTheScriptGoes)
+
+-- script goes inside of there
+
+	end
+	coroutine.wrap(Clone_fake_script)()
+
+
+
